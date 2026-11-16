@@ -1,0 +1,44 @@
+/* Host-build replacement for the newt-generated syscfg.h: the values below are the
+ * default `syscfg.defs` values of the packages the Mayhem harnesses compile. */
+#ifndef H_MAYHEM_SYSCFG_
+#define H_MAYHEM_SYSCFG_
+
+#define MYNEWT_VAL(x) MYNEWT_VAL_ ## x
+
+#define MYNEWT_VAL_NEWT_FEATURE_LOGCFG (0)
+#ifdef MAYHEM_SELFTEST
+#define MYNEWT_VAL_SELFTEST (1)
+#else
+#define MYNEWT_VAL_SELFTEST (0)
+#endif
+
+/* kernel/os */
+#define MYNEWT_VAL_MSYS_1_BLOCK_COUNT (12)
+#define MYNEWT_VAL_MSYS_1_BLOCK_SIZE (292)
+#define MYNEWT_VAL_MSYS_1_SANITY_MIN_COUNT (0)
+#define MYNEWT_VAL_MSYS_2_BLOCK_COUNT (0)
+#define MYNEWT_VAL_MSYS_2_BLOCK_SIZE (0)
+#define MYNEWT_VAL_MSYS_2_SANITY_MIN_COUNT (0)
+#define MYNEWT_VAL_MSYS_SANITY_TIMEOUT (60000)
+#define MYNEWT_VAL_OS_COREDUMP_CB (0)
+#define MYNEWT_VAL_OS_CPUTIME_FREQ (1000000)
+#define MYNEWT_VAL_OS_CRASH_FILE_LINE (0)
+#define MYNEWT_VAL_OS_DEFAULT_IRQ_CB (0)
+#define MYNEWT_VAL_OS_EVENTQ_DEBUG (0)
+#define MYNEWT_VAL_OS_EVENTQ_MONITOR (0)
+#define MYNEWT_VAL_OS_MAIN_STACK_SIZE (1024)
+#define MYNEWT_VAL_OS_MAIN_TASK_PRIO (127)
+#define MYNEWT_VAL_OS_MEMPOOL_CHECK (0)
+#define MYNEWT_VAL_OS_MEMPOOL_GUARD (0)
+#define MYNEWT_VAL_OS_MEMPOOL_POISON (0)
+#define MYNEWT_VAL_OS_SYSVIEW (0)
+#define MYNEWT_VAL_OS_SYSVIEW_TRACE_MBUF (0)
+#define MYNEWT_VAL_OS_SYSVIEW_TRACE_MEMPOOL (0)
+#define MYNEWT_VAL_OS_TICKS_PER_SEC (1000)
+#define MYNEWT_VAL_SANITY_INTERVAL (15000)
+
+/* encoding/json */
+#define MYNEWT_VAL_JSON_FLOAT_SUPPORT (1)
+#define MYNEWT_VAL_JSON_REAL_IS_FLOAT (0)
+
+#endif
